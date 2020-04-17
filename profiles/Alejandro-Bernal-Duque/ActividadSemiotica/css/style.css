@@ -1,0 +1,101 @@
+header{
+
+    background:#262d3d;
+    color: #fff;
+
+}
+
+body{
+
+    background: white;
+}
+
+aside{
+    background: white;
+}
+
+#fondos{
+    height: 700px;
+}
+
+#logo{
+width: 200px;
+height: auto;
+margin: auto;
+border-radius: 10px;
+/*box-shadow:5px 5px 0px #424242;*/
+
+padding: 10px;
+border: 2px solid #000;
+
+}
+input{
+
+border:2.3px solid black;
+
+}
+
+#fondos{
+
+    height: 100%;
+    width: 100%;
+}
+
+.nav-item{
+
+background:#110E51;
+padding: 4px;
+border: 3px solid white;
+
+}
+
+#letras{
+
+    color: white;
+}
+
+footer{
+    margin: auto;
+    margin-top: 5px;
+    background-color: lightblue;}
+
+#redes{
+
+   margin-left: 50px;
+
+}
+
+
+#cuadrogrande{
+
+margin: auto;
+margin-top: 7px;
+height: 600px;
+
+}
+
+#costadoalto{
+    margin: auto;
+    margin-top: 8px;
+    margin-right: 4px;
+    margin-left: -6px;
+    background: whitesmoke;
+    
+
+}
+
+#costadobajo{
+    margin: auto;
+    margin-top: 8px;
+    margin-right: 4px;
+    margin-left: -6px;
+    background: whitesmoke;
+   
+
+}
+
+#titulitos{
+    
+    color: black;
+    
+}

@@ -1,0 +1,91 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    padding-top: 80px;
+}
+#mainNav{
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: "";
+}
+#mainNav a{
+    color: white;
+}
+.present{
+    background-image: url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2041&q=80);
+    width: 100%;
+    color: white;
+}
+.threeD {
+    text-shadow: 1px 3px 2px rgb(72, 29, 107), 1px 2px 5px rgb(0, 0, 0);
+}
+.frase{
+    text-align: justify;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/**/
+
+.beneficios,.caracts{
+    background-color: rgb(190, 190, 190);
+}
+
+.funcionalidades{
+    background:  black;
+}
+table td:first-child {
+    width: 33.3%;
+}
+
+table td:nth-child(2) {
+    width: 33.3%;
+}
+
+table td:nth-child(3) {
+    width: 33.3%;
+}
+
+#info{
+    text-justify: auto;
+}
+#avatar{
+    width: 70%;
+}
+.avatar{
+    width: 70%;
+}
+.tarjeta{
+    padding-left: 1.5rem;
+}
+.card{
+    /*border-radius: 4px;*/
+    background-color: #f6ff66;
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /* SOMBRAS x / y / blur:desenfoque / propagación:tamaño / Color */
+  }
+footer{
+    padding: 1.5rem 0;
+    color: rgb(100, 100, 100);
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+.notext-decoration, a .notext-decoration, .notext-decoration p a{
+    text-decoration: none;
+}
+.text-muted {
+    color: #6c757d!important;
+}
+.copyright{
+    float: right;
+    font-size: x-small;
+}
+.pie{
+    font-size: x-small;
+}
+#red{
+    padding-right: 3rem;
+    font-size: xx-large;
+}

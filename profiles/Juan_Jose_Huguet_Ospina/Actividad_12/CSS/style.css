@@ -1,0 +1,63 @@
+header{
+    background: #E3F047;
+    color: white;
+    padding: 10px;
+}
+
+
+aside{
+    background: black;
+    color: white;
+}
+
+footer{
+    background: white;
+    color: black;
+}
+
+
+#p1{
+    
+    color:white;
+    border: solid ivory;
+    font-size: large;
+    background: black;
+    display: inline-block;
+    width: 25%;
+    height: 10%;
+}
+#p2{
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    color: black;
+
+}
+#p3{
+    display: inline-block;
+    
+    font-size: medium;
+    position: relative;
+    left: 900px;
+    border: solid;
+}
+
+#per{
+    padding: 15px;
+    background: white;
+    position: relative;
+    color: black;
+    border: solid rgb(197, 196, 196);
+}
+
+
+#letra{
+    font-style: italic;
+    color: blue;
+    font-size: large;
+}
+
+footer
+{
+    background: #E3F047;
+}
