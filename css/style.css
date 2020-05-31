@@ -4,6 +4,10 @@
 body{
     padding-top: 80px;
 }
+
+
+
+/*NAVEGACIÓN*/
 #mainNav{
     background-color: black;
     padding-top: 1rem;
@@ -13,6 +17,13 @@ body{
 #mainNav a{
     color: white;
 }
+
+.navbar-brand strong:hover, #navbarTogglerDemo02 ul li a:hover{
+    color: #f6ff66;
+}
+
+
+/*PRESENTACIÓN*/
 .present{
     background-image: url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2041&q=80);
     width: 100%;
@@ -27,50 +38,97 @@ body{
     margin-bottom: auto;
 }
 
-/**/
 
+
+/*bENEFICIOS FUNCIONALIDADES Y CARACTERÍSTICAS*/
 .beneficios,.caracts{
     background-color: rgb(190, 190, 190);
 }
 
-.funcionalidades{
-    background:  black;
-}
 table td:first-child {
     width: 33.3%;
 }
-
 table td:nth-child(2) {
     width: 33.3%;
 }
-
 table td:nth-child(3) {
     width: 33.3%;
 }
+#cpurple{
+    color: #540a64;
+    text-align: center;
+}
+#cpurple2{
+    color: #540a64;
+}
+#cwhite{
+    color: white;
+}
 
-#info{
-    text-justify: auto;
+
+.funcionalidades{
+    background:  black;
 }
-#avatar{
-    width: 70%;
+
+.areacaract{
+    padding: 1rem 0;
+    text-align: justify;
 }
-.avatar{
-    width: 70%;
+#texcenter p{
+    align-self: center;
 }
-.tarjeta{
-    padding-left: 1.5rem;
-}
-.my-card{
-    /*border-radius: 4px;*/
+
+
+
+/*SOBRE NOSOTROS*/
+.card{
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #f6ff66;
-    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    /* SOMBRAS x / y / blur:desenfoque / propagación:tamaño / Color */
-  }
-
-.photo-conflict {
-    width: 75%
+    box-shadow: 4px 4px 5px 3px #919741, 0 1px 2px rgba(0,0,0,0.24);
+}
+.card:hover{
+    box-shadow: 12px 15px 5px 3px #919741, 0 1px 2px rgba(0,0,0,0.24);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.delay-1{
+    animation-delay: 0.5s;
+    position: relative;
+    z-index: 5;
+}
+.delay-2{
+    animation-delay: 1s;
+    position: relative;
+    z-index: 4;
+}
+.delay-3{
+    animation-delay: 1.5s;
+    position: relative;
+    z-index: 4;
 }
 
+
+
+/*SUSCRIBIRSE*/
+.suscribirse{
+    background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+    padding: 1rem 0;
+    
+}
+.sus{
+    color: white;
+    padding: 0 20%;
+    
+}
+.box{
+        backdrop-filter: blur(4.5px);  
+        -webkit-backdrop-filter: blur(4.5px);
+}
+
+
+/*FOOTER*/
 footer{
     padding: 1.5rem 0;
     color: rgb(100, 100, 100);
