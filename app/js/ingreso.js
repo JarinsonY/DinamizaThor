@@ -70,12 +70,6 @@ function observador() {
 
 observador();
 
-function aparece() {
-    location.assign("home.html");
-}
-function noAparece(){
-    
-}
 
 function cerrar() {
     firebase.auth().signOut().then(function () {
