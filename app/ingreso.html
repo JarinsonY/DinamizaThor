@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ingreso</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCcFToUXcaHnJefmZvZ_PAYIV__Pvy7FYk",
+            authDomain: "usuarios-fc2d0.firebaseapp.com",
+            databaseURL: "https://usuarios-fc2d0.firebaseio.com",
+            projectId: "usuarios-fc2d0",
+            storageBucket: "usuarios-fc2d0.appspot.com",
+            messagingSenderId: "406211320164",
+            appId: "1:406211320164:web:5afacb8571fbb730968271",
+            measurementId: "G-FN49Y6PLN8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+
+<body class="ingreso">
+    <div class="container">
+        <div class="contenido">
+            <h1 class="brand">DINAMIZATHOR</h1>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" placeholder="Correo" class="form-control" id="email">
+                    <input type="password" placeholder="Contraseña" class="form-control mt-2" id="contrasena">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
+                </div>
+            </form>
+            <br><br>
+            <a onclick="olvido()">¿Olvidaste tu contraseña?</a>
+            <br><br>
+
+            <button type="submit" class="btn btn-outline-dark mb-2" onclick="ingresar()">Ingresar</button><br>
+            <button type="submit" class="btn btn-outline-dark" data-toggle="modal"
+            data-target="#exampleModal">Registrarse</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Formulario de Registro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="email" id="email2" class="form-control" placeholder="Ingresa correo...">
+                        <div class="mt-2">
+                            <input type="password" id="contrasena2" class="form-control"
+                                placeholder="Ingresa contraseña...">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="registrar()">Registrarse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ingreso.js"></script>
+</body>
+
+</html>

@@ -21,6 +21,9 @@ body{
 .navbar-brand strong:hover, #navbarTogglerDemo02 ul li a:hover{
     color: #f6ff66;
 }
+.nav-item{
+    font-size: small;
+}
 
 
 /*PRESENTACIÓN*/
