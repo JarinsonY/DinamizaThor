@@ -27,3 +27,20 @@ form{
     background-color: rgba(255, 255, 255, 0.322);
     width: 60%;
 }
+.ribbon{
+    width: 120px;
+    height: 0px;
+    border-bottom: 50px solid #d9534f;
+    border-top: 50px solid #d9534f;
+    border-right: 35px solid transparent;
+}
+.oval-half-red {
+    text-align: center;
+    width: 250px;
+    height: 100px;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    border-radius: 0 50% / 0 100%;
+    background: #5cb85c;
+    border: 3px solid #555;
+}

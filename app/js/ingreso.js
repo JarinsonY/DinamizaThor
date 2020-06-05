@@ -3,7 +3,7 @@ function ingresar() {
     var contrasena = $("#contrasena").val();
 
     firebase.auth().signInWithEmailAndPassword(email, contrasena).then(function () {
-        aparece();
+        aparece(user);
     }).catch(function (error) {
         alert("Datos inválidos, por favor intente de nuevo...");
         // Handle Errors here.
@@ -38,7 +38,6 @@ function verificar() {
 
     user.sendEmailVerification().then(function () {
         // Email sent.
-        alert("Revisa tu correo electrónico.")
         console.log("Enviando correo...");
     }).catch(function (error) {
         // An error happened.
@@ -64,6 +63,7 @@ function observador() {
             console.log('*************');
         } else {
             // User is signed out.
+            console.log("No existe usuario activo.");
         }
     });
 }
@@ -72,6 +72,9 @@ observador();
 
 function aparece() {
     location.assign("home.html");
+}
+function noAparece(){
+    
 }
 
 function cerrar() {
@@ -90,10 +93,9 @@ function olvido() {
 
     auth.sendPasswordResetEmail(emailAddress).then(function () {
         // Email sent.
-        alert("Por favor revise su correo para restablecer su contraseña...");
+        alert("Por favor revise su correo para restablecer la contraseña...");
     }).catch(function (error) {
         // An error happened.
         alert("Es necesario haber ingresado un correo...");
-        alert(error)
     });
 }
