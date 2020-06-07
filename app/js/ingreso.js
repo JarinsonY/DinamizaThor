@@ -30,6 +30,7 @@ function registrar() {
     var email2 = $("#email2").val();
     var contrasena2 = $("#contrasena2").val();
     var nombre = $("#nombre").val();
+    var perfil = $("#select").val();
     /* var foto = $("#exampleFormControlFile1"); */
 
     firebase.auth().createUserWithEmailAndPassword(email2, contrasena2).then(function () {
@@ -38,6 +39,7 @@ function registrar() {
 
         user.updateProfile({
             displayName: nombre,
+            profile: perfil
             /* photoURL: foto */
 
         }).then(function () {
@@ -65,7 +67,7 @@ function verificar() {
         console.log("Enviando correo...");
     }).catch(function (error) {
         // An error happened.
-        alert("Valide sus datos.")
+        alert("Valide sus datos.");
         console.log(error);
     });
 }
@@ -82,6 +84,7 @@ function observador() {
             var isAnonymous = user.isAnonymous;
             var uid = user.uid;
             var providerData = user.providerData;
+            var profile = user.profile;
             console.log('*************');
             console.log(user.emailVerified);
             console.log('*************');

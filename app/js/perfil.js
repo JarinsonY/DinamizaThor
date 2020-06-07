@@ -12,8 +12,11 @@ $(() => {
                 var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
                 var providerData = user.providerData;
+                var profile = user.profile;
+                console.log(user.profile);
                 console.log(user.photoURL);
                 console.log(user.displayName);
+                console.log('*************');
                 console.log('*************');
                 console.log(user.emailVerified);
                 console.log('*************');
