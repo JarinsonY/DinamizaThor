@@ -1,0 +1,83 @@
+body{
+    padding-top: 0.5rem;
+    background:radial-gradient(ellipse, #717573, #E1E1E1, #F0E52A);
+    background-attachment: fixed;
+    background-size:cover;
+}
+.cabecera, .fecha, .main{
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+}
+.fecha{
+    background-color: rgb(199, 199, 199);
+    color: rgb(53, 53, 53);
+    padding: 0.5rem 0;
+    margin: auto;
+}
+
+/* CONFIGURACIÓN BOTONES */
+#irCalendario{
+    color: #6735dc;
+    border-color: #6735dc;
+}
+#irCalendario:hover{
+    color: white;
+    background-color: #502463;
+    border-color: #502463;
+}
+.btn-purple{
+    background-color: #502463;
+    color: white;
+    border-color: #502463;
+}
+.btn-purple:hover{
+    background-color: #3b1c47;
+    color: white;
+}
+.btn-simbolo{
+    background-color: transparent;
+    border-color: black;
+}
+.user{
+    width: 20px;
+}
+.btn-simbolo a{
+    color: black;
+}
+.btn-simbolo:hover{
+    background-color: white;
+}
+
+/* MAIN */
+#logo{
+    width: 60%;
+}
+.list-group-item{
+    border: 0;
+    color: black;
+    background-color: transparent;
+}
+
+/* FOOTER */
+footer{
+    padding: 1.5rem 0;
+    color: rgb(100, 100, 100);
+}
+.notext-decoration, a .notext-decoration, .notext-decoration p a{
+    text-decoration: none;
+}
+.text-muted {
+    color: #6c757d!important;
+}
+.copyright{
+    float: right;
+    font-size: x-small;
+}
+.pie{
+    font-size: x-small;
+}
+#red{
+    padding-right: 3rem;
+    font-size: xx-large;
+}

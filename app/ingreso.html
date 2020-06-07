@@ -8,7 +8,7 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png"/>
+    <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
     <link rel="stylesheet" href="css/style.css">
     <title>Ingreso</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -53,12 +53,12 @@
                 </div>
             </form>
             <br><br>
-            <a href="" onclick="olvido()">¿Olvidaste tu contraseña?</a>
+            <a href="#" onclick="olvido()">¿Olvidaste tu contraseña?</a>
             <br><br>
 
             <button type="submit" class="btn btn-success mb-2" onclick="ingresar()">Ingresar</button><br>
             <button type="submit" class="btn btn-outline-dark" data-toggle="modal"
-            data-target="#exampleModal">Registrarse</button>
+                data-target="#exampleModal">Registrarse</button>
         </div>
 
         <!-- Modal -->
@@ -73,15 +73,22 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <input type="email" id="email2" class="form-control" placeholder="Ingresa correo...">
+                        <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre...">
+                        <!-- <input type="text" id="apellido" class="form-control my-2" placeholder="Ingresa tus apellidos..."> -->
+                        <input type="email" id="email2" class="form-control my-2" placeholder="Ingresa correo...">
                         <div class="mt-2">
                             <input type="password" id="contrasena2" class="form-control"
                                 placeholder="Ingresa contraseña...">
                         </div>
+                        <!-- <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div> -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="registrar()">Registrarse</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal"
+                            onclick="registrar()">Registrarse</button>
                     </div>
                 </div>
             </div>

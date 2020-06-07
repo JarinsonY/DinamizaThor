@@ -1,0 +1,51 @@
+.cabecera{
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+}
+.btn-simbolo{
+    background-color: transparent;
+    border-color: black;
+}
+.btn-simbolo a{
+    color: black;
+}
+.btn-simbolo:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+/* MAIN */
+
+.main{
+    padding-top: 2rem;
+}
+#imgPerfil{
+    border: 3px solid #502463;
+    background-color: #5024632c;
+}
+
+/* .nombre, .imgPerfil{
+    text-align: end;
+} */
+.input-group-text{
+    background-color: #502463;
+    color: white;
+    text-transform: uppercase;
+}
+.list-group-item{
+    border: 0;
+    color: black;
+    background-color: transparent;
+}
+
+/* INFORMACIÓN */
+
+.informacion{
+    padding-top: 5rem;
+    text-align: center;
+}
+.btnOpciones{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}

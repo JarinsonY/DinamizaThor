@@ -1,3 +1,14 @@
+/* // Initialize Cloud Firestore through Firebase
+firebase.initializeApp({
+    apiKey: "AIzaSyCcFToUXcaHnJefmZvZ_PAYIV__Pvy7FYk",
+    authDomain: "usuarios-fc2d0.firebaseapp.com",
+    projectId: "usuarios-fc2d0"
+});
+
+var db = firebase.firestore(); */
+
+observador();
+
 function ingresar() {
     var email = $("#email").val();
     var contrasena = $("#contrasena").val();
@@ -18,9 +29,22 @@ function ingresar() {
 function registrar() {
     var email2 = $("#email2").val();
     var contrasena2 = $("#contrasena2").val();
+    var nombre = $("#nombre").val();
+    /* var foto = $("#exampleFormControlFile1"); */
 
     firebase.auth().createUserWithEmailAndPassword(email2, contrasena2).then(function () {
         alert("Registro completado, por favor revisa tu correo para verificar su cuenta.");
+        var user = firebase.auth().currentUser;
+
+        user.updateProfile({
+            displayName: nombre,
+            /* photoURL: foto */
+
+        }).then(function () {
+            // Update successful.
+        }).catch(function (error) {
+            // An error happened.
+        });
         verificar();
     })
         .catch(function (error) {
@@ -38,7 +62,6 @@ function verificar() {
 
     user.sendEmailVerification().then(function () {
         // Email sent.
-        alert("Revisa tu correo electrónico.")
         console.log("Enviando correo...");
     }).catch(function (error) {
         // An error happened.
@@ -62,13 +85,13 @@ function observador() {
             console.log('*************');
             console.log(user.emailVerified);
             console.log('*************');
+            /* location.assign("home.html"); */
         } else {
             // User is signed out.
         }
     });
 }
 
-observador();
 
 function aparece() {
     location.assign("home.html");
@@ -91,6 +114,7 @@ function olvido() {
     auth.sendPasswordResetEmail(emailAddress).then(function () {
         // Email sent.
         alert("Por favor revise su correo para restablecer su contraseña...");
+        alert("Hecho")
     }).catch(function (error) {
         // An error happened.
         alert("Es necesario haber ingresado un correo...");

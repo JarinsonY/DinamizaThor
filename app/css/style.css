@@ -14,6 +14,7 @@
     text-align: center;
     align-items: center;
     text-align: -webkit-center;
+    text-align: -moz-center;
 }
 .brand{
     margin-bottom: 10rem;
