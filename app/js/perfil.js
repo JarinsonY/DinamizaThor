@@ -14,18 +14,18 @@ $(() => {
                 var uid = user.uid;
                 var providerData = user.providerData;
                 var profile = user.profile;
-                console.log(user.profile);
-                console.log(user.photoURL);
-                console.log(user.displayName);
-                console.log('*************');
-                console.log('*************');
-                console.log(user.emailVerified);
-                console.log('*************');
-                console.log(user.email);
             } else {
-                // User is signed out.
+                console.log("No existe usuario loggeado.");
+                let info = `<div class="container mt-5">
+                <div class="alert alert-warning" role="alert">
+                    <p>Sesión no iniciada...</p>
+                    <p>Para iniciar sesión, de click en el botón Ingresar.</p>
+                    <button class="btn btn-outline-danger" id="irIngreso"><a href="ingreso.html">Ingresar</a></button>
+                </div>
+            </div>`
+                $("#informacion").html(info);
             }
-            
+
             /* $("#pnombre").html(doc.data().first); */
             /* $("#imgPerfil").attr("src", photoURL); */
             /* $("#correo").val(email); */

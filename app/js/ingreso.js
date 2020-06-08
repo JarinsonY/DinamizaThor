@@ -87,7 +87,6 @@ function verificar() {
 function observador() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            console.log("Existe usuario activo.");
             // User is signed in.
             var displayName = user.displayName;
             var email = user.email;
@@ -97,12 +96,10 @@ function observador() {
             var uid = user.uid;
             var providerData = user.providerData;
             var profile = user.profile;
-            console.log('*************');
-            console.log(user.emailVerified);
-            console.log('*************');
             /* location.assign("home.html"); */
         } else {
             // User is signed out.
+            console.log("No existe usuario loggeado.");
         }
     });
 }

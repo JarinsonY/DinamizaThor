@@ -5,7 +5,7 @@ $(() => {
     var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
     var f = new Date();
     $("#fecha").append("Hoy es " + diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-    
+
 
     function observador() {
         firebase.auth().onAuthStateChanged(function (user) {
@@ -19,18 +19,18 @@ $(() => {
                 var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
                 var providerData = user.providerData;
-                console.log('*************');
-                console.log(user.emailVerified);
-                console.log('*************');
                 /* location.assign("home.html"); */
             } else {
+                console.log("No existe usuario loggeado.");
                 // User is signed out.
-                let info =`<div class="container mt-5">
+                let info = `<div class="container mt-5">
                 <div class="alert alert-warning" role="alert">
-                    Sesión no iniciada...
+                    <p>Sesión no iniciada...</p>
+                    <p>Para iniciar sesión, de click en el botón Ingresar.</p>
+                    <button class="btn btn-outline-danger" id="irIngreso"><a href="ingreso.html">Ingresar</a></button>
                 </div>
             </div>`
-            $("#informacion").html(info);
+                $("#informacion").html(info);
             }
         });
     }

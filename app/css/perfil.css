@@ -38,11 +38,26 @@
 .main{
     padding-top: 2rem;
 }
+#irIngreso{
+    color: #6735dc;
+    font-weight: 600;
+    border-color: #6735dc;
+}
+#irIngreso:hover{
+    background-color: #502463;
+    border-color: #502463;
+}
+#irIngreso:hover a{
+    color: white;
+}
+#irIngreso a{
+    color: black;
+    text-decoration: none;
+}
 #imgPerfil{
     border: 3px solid #502463;
     background-color: #5024632c;
     box-shadow: 0.3rem 0.3rem 5px #50246377;
-
 }
 
 /* .nombre, .imgPerfil{
@@ -61,7 +76,7 @@
 
 /* INFORMACIÓN */
 
-.informacion{
+.info{
     padding-top: 5rem;
     text-align: center;
 }

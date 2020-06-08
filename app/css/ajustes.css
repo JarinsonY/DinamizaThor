@@ -33,19 +33,19 @@
 .custom-file, .form-group{
     margin: 0 30%;
 }
-#modificarClave{
+#modificarClave, #irIngreso{
     color: #6735dc;
     font-weight: 600;
     border-color: #6735dc;
 }
-#modificarClave:hover{
+#modificarClave:hover, #irIngreso:hover{
     background-color: #502463;
     border-color: #502463;
 }
-#modificarClave:hover a{
+#modificarClave:hover a, #irIngreso:hover a{
     color: white;
 }
-#modificarClave a{
+#modificarClave a, #irIngreso a{
     color: black;
     text-decoration: none;
 }
