@@ -1,0 +1,40 @@
+.cabecera{
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+}
+.btn-simbolo{
+    background-color: transparent;
+    border-color: black;
+}
+.btn-simbolo a{
+    color: black;
+}
+.btn-simbolo:hover{
+    background-color: rgb(221, 221, 221);
+}
+.main{
+    padding-top: 1rem;
+}
+.boton:hover{
+    background-color: rgba(187, 187, 187, 0.329);
+    box-shadow: 3px 3px 3px #50246377;
+}
+.inst{
+    font-weight: bolder;
+}
+.subtitulo{
+    font-size: large;
+    font-weight: bold;
+}
+.main{
+    text-align: justify;
+}
+.desarrolladores{
+    text-align: center;
+}
+.boton{
+    border: 2px solid #6735dc;
+    margin-top: 1rem;
+    border-radius: 5px;
+}

@@ -1,0 +1,31 @@
+.cabecera{
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+}
+.btn-simbolo{
+    background-color: transparent;
+    border-color: black;
+}
+.btn-simbolo a{
+    color: black;
+}
+.btn-simbolo:hover{
+    background-color: rgb(221, 221, 221);
+}
+.main{
+    padding-top: 2rem;
+    text-align: center;
+}
+.boton{
+    border: 2px solid #6735dc;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.boton:hover{
+    background-color: rgba(187, 187, 187, 0.329);
+    box-shadow: 3px 3px 3px #50246377;
+}
+.opc{
+    padding: 2rem 0;
+}
