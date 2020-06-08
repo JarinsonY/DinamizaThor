@@ -13,6 +13,7 @@
     <title>Ingreso</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
     <!-- Add additional services that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
@@ -74,10 +75,12 @@
                     </div>
                     <div class="modal-body">
                         <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre...">
+                        <input type="text" id="documento" class="form-control my-2" placeholder="Ingresa tu número de documento...">
+                        <input type="text" id="edad" class="form-control my-2" placeholder="Ingresa tu edad...">
                         <!-- <input type="text" id="apellido" class="form-control my-2" placeholder="Ingresa tus apellidos..."> -->
                         <input type="email" id="email2" class="form-control my-2" placeholder="Ingresa correo...">
                         <select class="form-control my-2" id="select" name="user">
-                            <option value="estudiante" name="estudiante">Estudiante</option>
+                            <option value="Estudiante" name="estudiante">Estudiante</option>
                             <option value="docente" name="docente">Docente</option>
                         </select>
                         <div class="mt-2">

@@ -1,3 +1,4 @@
+var db = firebase.firestore();
 $(() => {
     observador();
     function observador() {
@@ -24,12 +25,23 @@ $(() => {
             } else {
                 // User is signed out.
             }
-            $("#pnombre").html(displayName);
+            
+            /* $("#pnombre").html(doc.data().first); */
             /* $("#imgPerfil").attr("src", photoURL); */
-            $("#correo").val(email);
+            /* $("#correo").val(email); */
         });
     }
 })
+
+db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        $("#pnombre").html(doc.data().first);
+        $("#perfil").val(doc.data().profile);
+        $("#ident").val(doc.data().doc);
+        $("#correo").val(doc.data().email);
+    });
+});
 
 function cerrar() {
     firebase.auth().signOut().then(function () {

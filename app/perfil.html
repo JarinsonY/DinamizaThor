@@ -13,6 +13,7 @@
     <title>DinamizaThor</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
     <!-- Add additional services that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
@@ -59,7 +60,7 @@
                 <div class="col-md-8 nombre">
                     <b id="pnombre"></b>
                 </div>
-                <div class="col-md-4 imgPerfil">
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
@@ -75,12 +76,12 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">Soy</span>
                                 </div>
-                                <input type="text" class="form-control" value="Estudiante" readonly>
+                                <input type="text" class="form-control" id="perfil" readonly>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" id="ident" value="123456789" readonly>
+                                <input type="text" class="form-control" id="ident" readonly>
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">Id</span>
                                 </div>

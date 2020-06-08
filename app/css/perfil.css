@@ -41,6 +41,8 @@
 #imgPerfil{
     border: 3px solid #502463;
     background-color: #5024632c;
+    box-shadow: 0.3rem 0.3rem 5px #50246377;
+
 }
 
 /* .nombre, .imgPerfil{

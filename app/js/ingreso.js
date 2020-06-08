@@ -1,11 +1,6 @@
-/* // Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-    apiKey: "AIzaSyCcFToUXcaHnJefmZvZ_PAYIV__Pvy7FYk",
-    authDomain: "usuarios-fc2d0.firebaseapp.com",
-    projectId: "usuarios-fc2d0"
-});
+// Initialize Cloud Firestore through Firebase
 
-var db = firebase.firestore(); */
+var db = firebase.firestore();
 
 observador();
 
@@ -30,22 +25,39 @@ function registrar() {
     var email2 = $("#email2").val();
     var contrasena2 = $("#contrasena2").val();
     var nombre = $("#nombre").val();
+    var documeto = $("#documento").val();
+    var edad = $("#edad").val();
     var perfil = $("#select").val();
     /* var foto = $("#exampleFormControlFile1"); */
 
     firebase.auth().createUserWithEmailAndPassword(email2, contrasena2).then(function () {
         alert("Registro completado, por favor revisa tu correo para verificar su cuenta.");
         var user = firebase.auth().currentUser;
+        
 
         user.updateProfile({
             displayName: nombre,
             profile: perfil
             /* photoURL: foto */
-
         }).then(function () {
             // Update successful.
         }).catch(function (error) {
             // An error happened.
+        });
+
+
+        db.collection("users").add({
+            first: nombre,
+            doc: documeto,
+            age: edad,
+            email: email2,
+            profile: perfil
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
         });
         verificar();
     })
