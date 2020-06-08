@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
+    <link rel="stylesheet" href="css/notas.css">
+    <title>DinamizaThor</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCcFToUXcaHnJefmZvZ_PAYIV__Pvy7FYk",
+            authDomain: "usuarios-fc2d0.firebaseapp.com",
+            databaseURL: "https://usuarios-fc2d0.firebaseio.com",
+            projectId: "usuarios-fc2d0",
+            storageBucket: "usuarios-fc2d0.appspot.com",
+            messagingSenderId: "406211320164",
+            appId: "1:406211320164:web:5afacb8571fbb730968271",
+            measurementId: "G-FN49Y6PLN8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+
+<body class="informacion">
+    <div class="container">
+
+        <header>
+            <div class="row cabecera">
+                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a href="aprendizaje.html"><i
+                                class="fas fa-arrow-left"></i></a></button></div>
+                <div class="col-md-4">
+                    <h5><b>NOTAS</b></h5>
+                </div>
+            </div>
+        </header>
+        <br>
+        <div class="main">
+
+            <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link color1" href="#tab1">Artística</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color2" href="#tab2">Informática</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color3" href="#tab3">Matemáticas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color4" href="#tab4">Lengua Castellana</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="asignaturas">
+                <br>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-danger dropdown-toggle" type="button" id="perido"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PERIODO #
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-center" aria-labelledby="perido">
+                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 1</a>
+                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 2</a>
+                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 3</a>
+                        </div>
+                    </div>
+
+                <article id="tab1">
+                    <table class="table justify-content-center table-hover" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Asignación</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_tabla1">
+
+                        </tbody>
+                    </table>
+                </article>
+                <article id="tab2">
+                    <table class="table justify-content-center table-hover" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Asignación</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_tabla2">
+
+                        </tbody>
+                    </table>
+                </article>
+                <article id="tab3">
+                    <table class="table justify-content-center table-hover" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Asignación</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_tabla3">
+
+                        </tbody>
+                    </table>
+                </article>
+                <article id="tab4">
+                    <table class="table justify-content-center table-hover" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Asignación</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_tabla4">
+
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/notas.js"></script>
+</body>
+
+</html>
