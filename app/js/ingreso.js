@@ -1,17 +1,19 @@
 // Initialize Cloud Firestore through Firebase
 
 var db = firebase.firestore();
-
 observador();
 
 function ingresar() {
     var email = $("#email").val();
     var contrasena = $("#contrasena").val();
-
+    
     firebase.auth().signInWithEmailAndPassword(email, contrasena).then(function () {
         aparece();
     }).catch(function (error) {
         alert("Datos inválidos, por favor intente de nuevo...");
+        toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {timeOut: 5000})
+        //$('#element').toast('show');
+        //toastr.error("No ha ingresado Nombre","Aviso!");
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;

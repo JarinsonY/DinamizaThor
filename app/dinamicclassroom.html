@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
-    <link rel="stylesheet" href="css/actinteractivas.css">
+    <link rel="stylesheet" href="css/dinamicclassroom.css">
     <title>DinamizaThor</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
     <!-- Add additional services that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+
 
     <script>
         // Your web app's Firebase configuration
@@ -28,70 +31,56 @@
             authDomain: "usuarios-fc2d0.firebaseapp.com",
             databaseURL: "https://usuarios-fc2d0.firebaseio.com",
             projectId: "usuarios-fc2d0",
-            storageBucket: "usuarios-fc2d0.appspot.com",
+            storageBucket: "gs://usuarios-fc2d0.appspot.com",
             messagingSenderId: "406211320164",
             appId: "1:406211320164:web:5afacb8571fbb730968271",
             measurementId: "G-FN49Y6PLN8"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        firebase.storage();
         firebase.analytics();
     </script>
 </head>
 
-<body class="informacion">
+<body class="informacion scrollbar-dinamizathor">
     <div class="container">
-
         <header>
             <div class="row cabecera">
-                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a href="home.html"><i
-                                class="fas fa-arrow-left"></i></a></button></div>
+                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a
+                            href="actinteractivas.html"><i class="fas fa-arrow-left"></i></a></button></div>
                 <div class="col-md-4">
-                    <h5><b>ACTIVIDADES INTERACTIVAS</b></h5>
+                    <h5><b>DINAMIC CLASSROOM</b></h5>
                 </div>
             </div>
         </header>
-        <br>
+
         <div class="main">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Dinamic Classroom</h5>
-                            <a href="dinamicclassroom.html" class="btn btn-light">Entrar</a>
-                        </div>
+            <label class="lbl">REUNIONES</label>
+            <p>Realice reuniones dinámicas virtuales en dónde se facilite el aprendizaje del conocimiento.</p>
+            <a href="https://meet.google.com/vxk-eioc-jhu" target="_blank"><button
+                    class="btn btn-outline-danger form-control" id="iniciarReunion">Iniciar reunión</button></a>
+
+            <label class="lbl mt-4">CHAT GRUPAL</label>
+            <div class="mb-1" id="chat">
+                <nav class="navbar navbar-dark bg-dt">
+                    <span class="navbar-brand" id="nombreUsuario">Chat</span>
+                </nav>
+                <main class="mt-2 scrollbar-dinamizathor" id="contenidoProtegido"></main>
+                <form class="input-group mt-2" id="formulario">
+                    <input type="text" class="form-control" placeholder="Enviar mensaje" id="inputChat">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-send" type="submit">Enviar</button>
                     </div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-            <br><br>
-            <div class="row ">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Foro Estudiantil</h5>
-                            <a href="#" class="btn btn-light">Entrar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-            <br><br>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Aprendizaje</h5>
-                            <a href="aprendizaje.html" class="btn btn-light">Entrar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
+                </form>
             </div>
         </div>
+        <footer class="text-muted">
+            <div class="container notext-decoration ">
+                <p class="copyright">Develop By: Dotores <i class="fa fa-copyright" aria-hidden="true">.</i></p>
+            </div>
+        </footer>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
@@ -99,7 +88,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/actinteractivas.js"></script>
+    <script src="js/dinamicclassroom.js"></script>
 </body>
 
 </html>
