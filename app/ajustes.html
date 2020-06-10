@@ -14,12 +14,15 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
     <!-- Add additional services that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+
 
     <script>
         // Your web app's Firebase configuration
@@ -28,13 +31,14 @@
             authDomain: "usuarios-fc2d0.firebaseapp.com",
             databaseURL: "https://usuarios-fc2d0.firebaseio.com",
             projectId: "usuarios-fc2d0",
-            storageBucket: "usuarios-fc2d0.appspot.com",
+            storageBucket: "gs://usuarios-fc2d0.appspot.com",
             messagingSenderId: "406211320164",
             appId: "1:406211320164:web:5afacb8571fbb730968271",
             measurementId: "G-FN49Y6PLN8"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        firebase.storage();
         firebase.analytics();
     </script>
 </head>
@@ -53,7 +57,7 @@
 
         <div class="main">
             <div class="col-md-12 centrar">
-                <img src="../landing/img/risaexe150.png" alt="imgPerfil" id="imgPerfil" class="rounded-lg">
+                <img src="" alt="imgPerfil" id="imgPerfil" class="rounded-lg">
             </div>
 
             <div class="form-group my-5">
@@ -62,18 +66,26 @@
             </div>
 
 
-            <div class="input-group my-3 mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Cambiar Foto</label>
+            <div class="form-group my-4">
+                <label class="lbl">CAMBIAR IMAGEN DE PERFIL</label>
+                <div class="input-group exception my-3 mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" name="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01" accept="image/png" accept="image/jpeg">
+                        <label class="custom-file-label" for="inputGroupFile01">Cambiar Foto</label>
+                    </div>
                 </div>
+                <a href="#" onclick="cambiarImgPerfil()"><button class="btn btn-outline-danger form-control"
+                        id="cambiarImgPerfil">Dé click aquí</button></a>
+                <small id="emailHelp" class="form-text text-muted">Despues escoger una imagen, de clic en el botón.</small>
             </div>
 
             <div class="form-group my-4">
                 <label class="lbl">CAMBIAR CONTRASEÑA</label>
-                <button class="btn btn-outline-danger form-control" id="modificarClave"><a href="#" onclick="modificarClave()">Dé click aquí</a></button>
-                <small id="emailHelp" class="form-text text-muted">Se le enviará un correo para realizar el cambio.</small>
+                <a href="#" onclick="modificarClave()"><button class="btn btn-outline-danger form-control"
+                        id="modificarClave">Dé click aquí</button></a>
+                <small id="emailHelp" class="form-text text-muted">Se le enviará un correo para realizar el
+                    cambio.</small>
             </div>
 
         </div>

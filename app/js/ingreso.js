@@ -37,7 +37,8 @@ function registrar() {
 
         user.updateProfile({
             displayName: nombre,
-            profile: perfil
+            profile: perfil,
+            photoURL: "https://firebasestorage.googleapis.com/v0/b/usuarios-fc2d0.appspot.com/o/usuarioImgPerfil%2FuserProfile.png?alt=media&token=c6c2f28b-4212-49ac-b591-a027759d87fb"
             /* photoURL: foto */
         }).then(function () {
             // Update successful.

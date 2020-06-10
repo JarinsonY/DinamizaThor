@@ -22,6 +22,7 @@
     padding-top: 4rem;
 }
 #imgPerfil{
+    width: 150px;
     border: 3px solid #502463;
     background-color: #5024632c;
     box-shadow: 0.3rem 0.3rem 5px #50246377;
@@ -30,22 +31,18 @@
     font-size: large;
     font-weight: bold;
 }
-.custom-file, .form-group{
+.form-group{
     margin: 0 30%;
 }
-#modificarClave, #irIngreso{
+#modificarClave, #irIngreso, #cambiarImgPerfil{
     color: #6735dc;
     font-weight: 600;
     border-color: #6735dc;
 }
-#modificarClave:hover, #irIngreso:hover{
+#modificarClave:hover, #irIngreso:hover, #cambiarImgPerfil:hover{
     background-color: #502463;
     border-color: #502463;
 }
-#modificarClave:hover a, #irIngreso:hover a{
+a #modificarClave:hover, a#irIngreso:hover,a #cambiarImgPerfil:hover{
     color: white;
-}
-#modificarClave a, #irIngreso a{
-    color: black;
-    text-decoration: none;
 }

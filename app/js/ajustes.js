@@ -1,4 +1,5 @@
 var db = firebase.firestore();
+var storage = firebase.app().storage("gs://usuarios-fc2d0.appspot.com");
 var correo;
 
 $(() => {
@@ -33,6 +34,8 @@ function observador() {
             var uid = user.uid;
             var providerData = user.providerData;
             var profile = user.profile;
+            console.log(photoURL)
+            $("#imgPerfil").attr("src", photoURL);
         } else {
             console.log("No existe usuario loggeado.");
             let info = `<div class="container mt-5">
@@ -43,8 +46,47 @@ function observador() {
                 </div>
             </div>`
                 $("#informacion").html(info);
+                
         }
     });
+}
+
+function cambiarImgPerfil(){
+
+    var user = firebase.auth().currentUser;
+    var file = ($("#inputGroupFile01"))[0].files[0];
+
+    
+    console.log(user);
+    console.log(file);
+    if(!file){
+        alert("Debe elegir un archivo.");
+
+    } else{
+        var storageRef = storage.ref('/usuarioImgPerfil/'+file.name);
+        
+        var uploadTask = storageRef.put(file);
+
+        uploadTask.on('state_changed', function(querySnapshot){
+
+        }, function(error){
+            console.log(error)
+        }, function(){
+            /* Cuando se sube el archivo a firebase */
+            storageRef.getDownloadURL().then(function(url) {
+            user.updateProfile({
+                photoURL: url
+              }).then(function() {
+                // Update successful.
+                console.log("Update successful.");
+                location.reload(true)
+              }).catch(function(error) {
+                console.log(e)
+              });
+            })
+        });
+    }
+
 }
 
 function modificarClave() {

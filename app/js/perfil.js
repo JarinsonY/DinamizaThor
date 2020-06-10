@@ -1,4 +1,5 @@
 var db = firebase.firestore();
+
 var correo;
 $(() => {
     observador();
@@ -16,6 +17,8 @@ $(() => {
                 var uid = user.uid;
                 var providerData = user.providerData;
                 var profile = user.profile;
+                console.log(photoURL)
+                $("#imgPerfil").attr("src", photoURL);
             } else {
                 console.log("No existe usuario loggeado.");
                 let info = `<div class="container mt-5">
