@@ -1,12 +1,7 @@
+var db = firebase.firestore();
+var correo;
 $(() => {
     observador();
-    /* FECHA */
-    var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
-    var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
-    var f = new Date();
-    $("#fecha").append("Hoy es " + diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-
-
     function observador() {
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -14,15 +9,15 @@ $(() => {
                 // User is signed in.
                 var displayName = user.displayName;
                 var email = user.email;
+                correo = email;
                 var emailVerified = user.emailVerified;
                 var photoURL = user.photoURL;
                 var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
                 var providerData = user.providerData;
-                /* location.assign("home.html"); */
+                var profile = user.profile;
             } else {
                 console.log("No existe usuario loggeado.");
-                // User is signed out.
                 let info = `<div class="container mt-5">
                 <div class="alert alert-warning" role="alert">
                     <p>Sesión no iniciada...</p>
@@ -32,9 +27,26 @@ $(() => {
             </div>`
                 $("#informacion").html(info);
             }
+
+            /* $("#pnombre").html(doc.data().first); */
+            /* $("#imgPerfil").attr("src", photoURL); */
+            /* $("#correo").val(email); */
         });
     }
+
+    db.collection("users").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            if(doc.data().email == correo){
+                $("#nombre").html(doc.data().first);
+                $("#documento").html(doc.data().doc);
+                $("#edad").html(doc.data().age);
+                $("#email").html(doc.data().email);
+            }
+        });
+    });
+    
 })
+
 
 function cerrar() {
     firebase.auth().signOut().then(function () {

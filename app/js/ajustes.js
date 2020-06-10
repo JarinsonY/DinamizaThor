@@ -3,6 +3,21 @@ var correo;
 
 $(() => {
     observador();
+
+    db.collection("users").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            if(doc.data().email == correo){
+                $("#nombre").val(doc.data().first);
+                $("#perfil").val(doc.data().profile);
+                $("#ident").val(doc.data().doc);
+                $("#correo").val(doc.data().email);
+                console.log(doc.data().first)
+                console.log(doc.data().profile)
+                console.log(doc.data().doc)
+                console.log(doc.data().email)
+            }
+        });
+    });
 })
 function observador() {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -31,17 +46,6 @@ function observador() {
         }
     });
 }
-
-
-db.collection("users").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-        $("#pnombre").val(doc.data().first);
-        $("#perfil").val(doc.data().profile);
-        $("#ident").val(doc.data().doc);
-        $("#correo").val(doc.data().email);
-    });
-});
 
 function modificarClave() {
     var auth = firebase.auth();

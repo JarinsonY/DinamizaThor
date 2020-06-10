@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
-    <link rel="stylesheet" href="css/ajustes.css">
+    <link rel="stylesheet" href="css/inforelevante.css">
     <title>DinamizaThor</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
@@ -43,48 +43,32 @@
     <div class="container">
         <header>
             <div class="row cabecera">
-                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a href="perfil.html"><i
+                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a href="home.html"><i
                                 class="fas fa-arrow-left"></i></a></button></div>
                 <div class="col-md-4">
-                    <h5 class=""><b>AJUSTES</b></h5>
+                    <h5 class=""><b>CALENDARIO</b></h5>
                 </div>
             </div>
         </header>
-
-        <div class="main">
-            <div class="col-md-12 centrar">
-                <img src="../landing/img/risaexe150.png" alt="imgPerfil" id="imgPerfil" class="rounded-lg">
-            </div>
-
-            <div class="form-group my-5">
-                <label class="lbl">USUARIO</label>
-                <input type="text" class="form-control" id="nombre" readonly>
-            </div>
-
-
-            <div class="input-group my-3 mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Cambiar Foto</label>
-                </div>
-            </div>
-
-            <div class="form-group my-4">
-                <label class="lbl">CAMBIAR CONTRASEÑA</label>
-                <button class="btn btn-outline-danger form-control" id="modificarClave"><a href="#" onclick="modificarClave()">Dé click aquí</a></button>
-                <small id="emailHelp" class="form-text text-muted">Se le enviará un correo para realizar el cambio.</small>
-            </div>
-
-        </div>
     </div>
+    <div class="container main">
+
+        <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FBogota&amp;src=amFhazBlcG5xdmI1bGttOGFkYjNudGk3ZmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXMuY28jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23795548&amp;color=%230B8043"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+        <a
+            href="https://calendar.google.com/calendar?cid=amFhazBlcG5xdmI1bGttOGFkYjNudGk3ZmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">IR
+            AL CALENDARIO</a>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/ajustes.js"></script>
+    <script src="js/inforelevante.js"></script>
 </body>
 
 </html>

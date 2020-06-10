@@ -1,0 +1,29 @@
+.cabecera, .bg{
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+}
+.btn-simbolo{
+    background-color: transparent;
+    border-color: black;
+}
+.btn-simbolo a{
+    color: black;
+}
+.btn-simbolo:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+.main{
+    padding: 1rem 10rem;
+}
+
+p{
+    border-bottom: 1px solid #ccc;
+    font-size: 14pt;
+}
+
+.lbl{
+    font-size: 16pt;
+    font-weight: bold;
+}
