@@ -11,17 +11,6 @@ $(() => {
         footer: 'Asegurese de ingresar datos',
         confirmButtonText: 'Entendido'
     }) */
-    Swal.fire({
-        title: 'Bienvenid@!',
-        text: 'Registro completado :)',
-        icon: 'info',
-        toast: true,
-        timer: 3000,
-        timerProgressBar: true,
-        position:'top-center',
-        /* footer: 'Asegurese de ingresar datos', */
-        showConfirmButton: false
-    })
 })
 
 function ingresar() {

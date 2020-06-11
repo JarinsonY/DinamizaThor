@@ -37,15 +37,6 @@ $(() => {
 })
 
 function cerrar() {
-    Swal.fire({
-        text: 'Cerrando sesión',
-        icon: 'warning',
-        toast: true,
-        timer: 3000,
-        timerProgressBar: true,
-        position:'top-end',
-        showConfirmButton: false
-    })
     firebase.auth().signOut().then(function () {
         location.assign("ingreso.html");
     }).catch(function (error) {
