@@ -1,8 +1,8 @@
-const botones = document.querySelector('#botones')
 const nombreUsuario = document.querySelector('#nombreUsuario')
 const contenidoProtegido = document.querySelector('#contenidoProtegido')
 const formulario = document.querySelector('#formulario')
 const inputChat = document.querySelector('#inputChat')
+let nameUsuario;
 
 $(() => {
     observador();
@@ -12,6 +12,7 @@ $(() => {
                 console.log("Existe usuario activo.");
                 // User is signed in.
                 var displayName = user.displayName;
+                nameUsuario = displayName;
                 var email = user.email;
                 var emailVerified = user.emailVerified;
                 var photoURL = user.photoURL;
@@ -50,6 +51,7 @@ $(() => {
             firebase.firestore().collection('chat').add({
                 texto: inputChat.value,
                 uid: user.uid,
+                uname: user.displayName,
                 fecha: Date.now()
             })
                 .then(res => { /* Guarda Mensaje */ })
@@ -66,13 +68,19 @@ $(() => {
                     if (doc.data().uid === user.uid) {
                         contenidoProtegido.innerHTML += /*html*/`
                         <div class="d-flex justify-content-end sms">
-                            <span class="badge badge-pills badge-enviado txt">${doc.data().texto}</span>
+                            <span class="badge badge-pills badge-enviado txt">
+                                <p class="uname">${nameUsuario}</p>
+                                <p>${doc.data().texto}</p>
+                            </span>
                         </div>
                     `
                     } else {
                         contenidoProtegido.innerHTML += /*html*/`
                         <div class="d-flex justify-content-start sms">
-                            <span class="badge badge-pills badge-recibido txt">${doc.data().texto}</span>
+                            <span class="badge badge-pills badge-recibido txt">
+                                <p class="uname">${doc.data().uname}</p>
+                                <p>${doc.data().texto}</p>
+                            </span>
                         </div>
                     `
                     }

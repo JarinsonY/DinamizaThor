@@ -1,20 +1,43 @@
 // Initialize Cloud Firestore through Firebase
-
 var db = firebase.firestore();
 observador();
+$(() => {
+    /* Swal.fire({
+        title: 'Bienvenid@!',
+        text: 'Registro completado, te llegará un correo para verificar su cuenta...',
+        icon: 'success',
+        timer: 3000,
+        timerProgressBar: true,
+        footer: 'Asegurese de ingresar datos',
+        confirmButtonText: 'Entendido'
+    }) */
+    Swal.fire({
+        title: 'Bienvenid@!',
+        text: 'Registro completado :)',
+        icon: 'info',
+        toast: true,
+        timer: 3000,
+        timerProgressBar: true,
+        position:'top-center',
+        /* footer: 'Asegurese de ingresar datos', */
+        showConfirmButton: false
+    })
+})
 
 function ingresar() {
     var email = $("#email").val();
     var contrasena = $("#contrasena").val();
-    
+
     firebase.auth().signInWithEmailAndPassword(email, contrasena).then(function () {
         aparece();
     }).catch(function (error) {
-        alert("Datos inválidos, por favor intente de nuevo...");
-        toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {timeOut: 5000})
-        //$('#element').toast('show');
-        //toastr.error("No ha ingresado Nombre","Aviso!");
-        // Handle Errors here.
+        Swal.fire({
+            title: 'Error!',
+            text: 'Datos inválidos, por favor intente de nuevo...',
+            icon: 'error',
+            /* footer: 'Asegurese de ingresar datos', */
+            confirmButtonText: 'Entendido'
+        })
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode);
@@ -33,9 +56,15 @@ function registrar() {
     /* var foto = $("#exampleFormControlFile1"); */
 
     firebase.auth().createUserWithEmailAndPassword(email2, contrasena2).then(function () {
-        alert("Registro completado, por favor revisa tu correo para verificar su cuenta.");
+        Swal.fire({
+            title: 'Bienvenid@!',
+            text: 'Registro completado, te llegará un correo para verificar su cuenta...',
+            icon: 'success',
+            /* footer: 'Asegurese de ingresar datos', */
+            confirmButtonText: 'Entendido'
+        })
         var user = firebase.auth().currentUser;
-        
+
 
         user.updateProfile({
             displayName: nombre,
@@ -56,12 +85,12 @@ function registrar() {
             email: email2,
             profile: perfil
         })
-        .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
         verificar();
     })
         .catch(function (error) {
@@ -82,7 +111,13 @@ function verificar() {
         console.log("Enviando correo...");
     }).catch(function (error) {
         // An error happened.
-        alert("Valide sus datos.");
+        Swal.fire({
+            title: 'Error!',
+            text: 'Verfique sus datos nuevamente.',
+            icon: 'error',
+            /* footer: 'Asegurese de ingresar datos', */
+            confirmButtonText: 'Entendido'
+        })
         console.log(error);
     });
 }
@@ -112,7 +147,7 @@ function aparece() {
     location.assign("home.html");
 }
 
-function cerrar() {
+/* function cerrar() {
     firebase.auth().signOut().then(function () {
         alert("Saliendo...");
         location.assign("ingreso.html");
@@ -120,7 +155,7 @@ function cerrar() {
         console.log("Ocurrió un error.");
         console.log(error);
     })
-}
+} */
 
 function olvido() {
     var auth = firebase.auth();
@@ -128,11 +163,19 @@ function olvido() {
 
     auth.sendPasswordResetEmail(emailAddress).then(function () {
         // Email sent.
-        alert("Por favor revise su correo para restablecer su contraseña...");
-        alert("Hecho")
+        Swal.fire({
+            title: 'Error!',
+            text: 'Por favor revisa tu correo para restablecer su contraseña...',
+            icon: 'error',
+            confirmButtonText: 'Entendido'
+        })
     }).catch(function (error) {
         // An error happened.
-        alert("Es necesario haber ingresado un correo...");
-        alert(error)
+        Swal.fire({
+            title: 'Error!',
+            text: 'Es necesario que ingreses un correo...',
+            icon: 'error',
+            confirmButtonText: 'Entendido'
+        })
     });
 }

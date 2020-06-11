@@ -55,7 +55,6 @@ db.collection("users").get().then((querySnapshot) => {
 
 function cerrar() {
     firebase.auth().signOut().then(function () {
-        alert("Saliendo...");
         location.assign("ingreso.html");
     }).catch(function (error) {
         console.log("Ocurrió un error.");

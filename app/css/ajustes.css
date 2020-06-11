@@ -46,3 +46,6 @@
 a #modificarClave:hover, a#irIngreso:hover,a #cambiarImgPerfil:hover{
     color: white;
 }
+.alerta{
+    padding: 0 20px;
+}

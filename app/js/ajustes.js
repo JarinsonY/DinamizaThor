@@ -7,7 +7,7 @@ $(() => {
 
     db.collection("users").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            if(doc.data().email == correo){
+            if (doc.data().email == correo) {
                 $("#nombre").val(doc.data().first);
                 $("#perfil").val(doc.data().profile);
                 $("#ident").val(doc.data().doc);
@@ -45,44 +45,62 @@ function observador() {
                     <button class="btn btn-outline-danger" id="irIngreso"><a href="ingreso.html">Ingresar</a></button>
                 </div>
             </div>`
-                $("#informacion").html(info);
-                
+            $("#informacion").html(info);
+
         }
     });
 }
 
-function cambiarImgPerfil(){
+function cambiarImgPerfil() {
 
     var user = firebase.auth().currentUser;
     var file = ($("#inputGroupFile01"))[0].files[0];
 
-    
+
     console.log(user);
     console.log(file);
-    if(!file){
-        alert("Debe elegir un archivo.");
+    if (!file) {
+        Swal.fire({
+            text: 'Debe elegir un archivo.',
+            icon: 'warning',
+            confirmButtonText: 'Entendido',
+            footer: 'Asegurese de que sea una imagen (png/jpeg).'
+        })
 
-    } else{
-        var storageRef = storage.ref('/usuarioImgPerfil/'+file.name);
-        
+    } else {
+        var storageRef = storage.ref('/usuarioImgPerfil/' + file.name);
+
         var uploadTask = storageRef.put(file);
 
-        uploadTask.on('state_changed', function(querySnapshot){
+        uploadTask.on('state_changed', function (querySnapshot) {
 
-        }, function(error){
+        }, function (error) {
             console.log(error)
-        }, function(){
+        }, function () {
+            Swal.fire({
+                text: 'Realizando cambios',
+                icon: 'info',
+                toast: true,
+                timer: 3000,
+                timerProgressBar: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                customClass: {
+                    content: 'alerta'
+                }
+
+            })
             /* Cuando se sube el archivo a firebase */
-            storageRef.getDownloadURL().then(function(url) {
-            user.updateProfile({
-                photoURL: url
-              }).then(function() {
-                // Update successful.
-                console.log("Update successful.");
-                location.reload(true)
-              }).catch(function(error) {
-                console.log(e)
-              });
+            storageRef.getDownloadURL().then(function (url) {
+                user.updateProfile({
+                    photoURL: url
+                }).then(function () {
+                    // Update successful.
+                    console.log("Update successful.");
+                    location.reload(true)
+                }).catch(function (error) {
+                    console.log(e)
+                });
             })
         });
     }
@@ -95,11 +113,15 @@ function modificarClave() {
 
     auth.sendPasswordResetEmail(emailAddress).then(function () {
         // Email sent.
-        alert("Por favor revise su correo para restablecer su contraseña...");
-        alert("Hecho");
+        Swal.fire({
+            text: 'Por favor revise su correo para restablecer tu contraseña...',
+            icon: 'success',
+            timer: 3000,
+            timerProgressBar: true,
+            confirmButtonText: 'Entendido'
+        })
     }).catch(function (error) {
         // An error happened.
-        alert("Es necesario haber ingresado un correo...");
         alert(error)
     });
 }

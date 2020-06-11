@@ -54,6 +54,9 @@ a #iniciarReunion:hover{
     background-image: -webkit-linear-gradient(330deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%);
     background-image: linear-gradient(120deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%); 
 }
+*{
+    scrollbar-color: #A5A355 #717573;
+}
 
 .bg-dt{
     background-image: linear-gradient(120deg, #717573  0%, #F0E52A 50%, #717573 100%); 
@@ -71,15 +74,26 @@ a #iniciarReunion:hover{
 }
 .badge{
     font-size: 90%;
+    font-weight: normal;
     margin: .25rem .50rem;
+    width: 10rem;
+    white-space: normal;
+}
+.badge p{
+    margin-bottom: .50rem;
+}
+.uname{
+    text-align: left;
+    color: #F0E52A;
+    font-weight: bolder;
 }
 .badge-recibido {
     color: #fff;
-    background-color: #F0E52A;
+    background-color: #6735dc;
 }
 .badge-enviado {
     color: #fff;
-    background-color: #6735dc;
+    background-color: #717573;
 }
 .btn-send{
     color: white;
