@@ -44,7 +44,18 @@ $(() => {
             e.preventDefault() //Para que no se recargue la página...
             /* console.log(inputChat.value) */
             if (!inputChat.value.trim()) { // .trim()Elimina espacios ingresados al inicio y al final del mensaje...
-                alert("No ha ingresado ningún mensaje... Intente nuevamente");
+                Swal.fire({
+                    text: 'No ha ingresado ningún mensaje... Intente nuevamente...',
+                    icon: 'info',
+                    toast: true,
+                    timer: 2500,
+                    timerProgressBar: true,
+                    position: 'center',
+                    showConfirmButton: false,
+                    customClass: {
+                        content: 'alerta'
+                    }
+                })
                 return
             }
 

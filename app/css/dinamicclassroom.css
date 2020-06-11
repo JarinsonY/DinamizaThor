@@ -17,6 +17,7 @@
 
 .main{
     padding: 3.5% 18%;
+    padding-bottom: .5rem;
     justify-content: center;
 }
 
@@ -73,17 +74,17 @@ a #iniciarReunion:hover{
     overflow-y: scroll;
 }
 .badge{
+    text-align: left;
     font-size: 90%;
     font-weight: normal;
     margin: .25rem .50rem;
-    width: 10rem;
+    width: 15rem;
     white-space: normal;
 }
 .badge p{
     margin-bottom: .50rem;
 }
-.uname{
-    text-align: left;
+.uname{ 
     color: #F0E52A;
     font-weight: bolder;
 }
@@ -92,6 +93,7 @@ a #iniciarReunion:hover{
     background-color: #6735dc;
 }
 .badge-enviado {
+    text-align: right;
     color: #fff;
     background-color: #717573;
 }
@@ -103,6 +105,9 @@ a #iniciarReunion:hover{
 }
 .btn-send:hover{
     background-image: linear-gradient(120deg, #71757373  0%, #F0E52A73 50%, #71757373 100%);
+}
+.alerta{
+    padding: 0 20px;
 }
 
 
