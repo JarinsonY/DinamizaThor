@@ -13,6 +13,7 @@
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
 }
+
 /* Estado Actual */
 #estadoActual ol{
     margin-bottom: 0;
@@ -25,31 +26,17 @@
 .breadcrumb-item+.breadcrumb-item::before{
     padding-right: 0.1rem;
 }
+
 .main{
-    padding-top: 1rem;
-}
-.boton:hover{
-    background-color: rgba(187, 187, 187, 0.329);
-    box-shadow: 3px 3px 3px #50246377;
-}
-.inst{
-    font-weight: bolder;
-}
-.subtitulo{
-    font-size: large;
-    font-weight: bold;
-}
-.main{
-    text-align: justify;
-}
-.desarrolladores{
+    padding-top: 2rem;
     text-align: center;
 }
-.boton{
-    border: 2px solid #6735dc;
-    margin-top: 1rem;
-    border-radius: 5px;
+
+#diccionario{
+    height: 30rem;
+    width: 100%;
 }
+
 .scrollbar-dinamizathor::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-color: #F5F5F5;

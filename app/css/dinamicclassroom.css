@@ -14,6 +14,18 @@
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
 }
+/* Estado Actual */
+#estadoActual ol{
+    margin-bottom: 0;
+    font-size: smaller;
+    background-color: transparent;
+}
+#estadoActual li{
+    padding-left: 0.1rem;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding-right: 0.1rem;
+}
 
 .main{
     padding: 3.5% 18%;
@@ -109,7 +121,22 @@ a #iniciarReunion:hover{
 .alerta{
     padding: 0 20px;
 }
-
+#irIngreso{
+    color: #6735dc;
+    font-weight: 600;
+    border-color: #6735dc;
+}
+#irIngreso:hover{
+    background-color: #502463;
+    border-color: #502463;
+}
+a:hover #irIngreso:hover{
+    color: white;
+}
+a #irIngreso{
+    color: black;
+    text-decoration: none;
+}
 
 
 footer{
@@ -127,4 +154,10 @@ footer{
 }
 .pie{
     font-size: x-small;
+}
+
+@media screen and (max-width: 766px){
+    .main{
+        padding: 3.5% 0%;
+    }
 }

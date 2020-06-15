@@ -27,10 +27,6 @@ $(() => {
             </div>`
                 $("#informacion").html(info);
             }
-
-            /* $("#pnombre").html(doc.data().first); */
-            /* $("#imgPerfil").attr("src", photoURL); */
-            /* $("#correo").val(email); */
         });
     }
 

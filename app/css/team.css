@@ -14,6 +14,18 @@
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
 }
+/* Estado Actual */
+#estadoActual ol{
+    margin-bottom: 0;
+    font-size: smaller;
+    background-color: transparent;
+}
+#estadoActual li{
+    padding-left: 0.1rem;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding-right: 0.1rem;
+}
 .main{
     background-image: url("../imagenes/bgDesarrolladores.png")   ;
     /* nos aseguramos que el elemento ocupe toda la ventana del navegador*/ 
@@ -45,6 +57,15 @@
     box-shadow: 12px 10px 5px 3px #919741, 0 1px 2px rgba(0,0,0,0.24);
     transition: color .40s ease-in-out,background-color .40s ease-in-out,border-color .40s ease-in-out,box-shadow .40s ease-in-out;
 }
+#red{
+    margin: auto;
+    color: black;
+    font-size: xx-large;
+}
+#red:hover{
+    color: #919741;
+    transition: color .40s ease-in-out,background-color .40s ease-in-out,border-color .40s ease-in-out,box-shadow .40s ease-in-out;
+}
 
 
 footer{
@@ -55,7 +76,7 @@ footer{
     text-decoration: none;
 }
 .text-muted {
-    color: #c7cbce!important;
+    color: #5a5a5a!important;
 }
 .copyright{
     float: right;
@@ -63,10 +84,6 @@ footer{
 }
 .pie{
     font-size: x-small;
-}
-#red{
-    padding-right: 3rem;
-    font-size: xx-large;
 }
 .scrollbar-dinamizathor::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
@@ -84,4 +101,9 @@ footer{
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-image: -webkit-linear-gradient(330deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%);
     background-image: linear-gradient(120deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%); 
+}
+@media screen and (max-width: 766px){
+    .main{
+        padding: 3.5% 9%;
+    }
 }

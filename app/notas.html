@@ -44,10 +44,20 @@
 
         <header>
             <div class="row cabecera">
-                <div class="col-md-4"><button class="btn btn-simbolo" id="btnVolverHome"><a href="aprendizaje.html"><i
-                                class="fas fa-arrow-left"></i></a></button></div>
+                <div class="col-md-4"><a href="aprendizaje.html"><button class="btn btn-simbolo" id="btnVolverHome"><i
+                                class="fas fa-arrow-left"></i></button></a></div>
                 <div class="col-md-4">
                     <h5><b>NOTAS</b></h5>
+                </div>
+                <div class="col-md-4">
+                    <nav aria-label="breadcrumb" id="estadoActual">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="actinteractivas.html">Sección Interactiva</a></li>
+                            <li class="breadcrumb-item"><a href="aprendizaje.html">Aprendizaje</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Notas</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -73,17 +83,17 @@
 
             <div class="asignaturas">
                 <br>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-danger dropdown-toggle" type="button" id="perido"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PERIODO #
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-center" aria-labelledby="perido">
-                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 1</a>
-                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 2</a>
-                            <a class="dropdown-item" onclick=cambiarNotas()>Periodo 3</a>
-                        </div>
+                <div class="dropdown">
+                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="perido"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PERIODO #
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="perido">
+                        <a class="dropdown-item" onclick=cambiarNotas()>Periodo 1</a>
+                        <a class="dropdown-item" onclick=cambiarNotas()>Periodo 2</a>
+                        <a class="dropdown-item" onclick=cambiarNotas()>Periodo 3</a>
                     </div>
+                </div>
 
                 <article id="tab1">
                     <table class="table justify-content-center table-hover" id="tabla">

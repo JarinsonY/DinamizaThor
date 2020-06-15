@@ -29,10 +29,10 @@ $(() => {
                 <div class="alert alert-warning" role="alert">
                     <p>Sesión no iniciada...</p>
                     <p>Para iniciar sesión, de click en el botón Ingresar.</p>
-                    <button class="btn btn-outline-danger" id="irIngreso"><a href="ingreso.html">Ingresar</a></button>
+                    <a href="ingreso.html"><button class="btn btn-outline-danger" id="irIngreso">Ingresar</button></a>
                 </div>
             </div>`
-                $("#informacion").html(info);
+                $(".informacion").html(info);
             }
         });
     }
@@ -74,7 +74,7 @@ $(() => {
 
         firebase.firestore().collection('chat').orderBy('fecha')
             .onSnapshot(query => {
-                contenidoProtegido.innerHTML = ''
+                contenidoProtegido.innerHTML = '' /* Añado los mensajes leyendolos de la base de datos "chat" y le pongo las clases */
                 query.forEach(doc => {
                     if (doc.data().uid === user.uid) {
                         contenidoProtegido.innerHTML += /*html*/`

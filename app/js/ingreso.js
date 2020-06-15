@@ -1,17 +1,29 @@
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
-observador();
 $(() => {
-    /* Swal.fire({
-        title: 'Bienvenid@!',
-        text: 'Registro completado, te llegará un correo para verificar su cuenta...',
-        icon: 'success',
-        timer: 3000,
-        timerProgressBar: true,
-        footer: 'Asegurese de ingresar datos',
-        confirmButtonText: 'Entendido'
-    }) */
+    observador();
 })
+
+function observador() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            var profile = user.profile;
+            location.assign("home.html");
+        } else {
+            // User is signed out.
+            console.log("No existe usuario loggeado.");
+        }
+    });
+}
+
 
 function ingresar() {
     var email = $("#email").val();
@@ -49,7 +61,6 @@ function registrar() {
             title: 'Bienvenid@!',
             text: 'Registro completado, te llegará un correo para verificar su cuenta...',
             icon: 'success',
-            /* footer: 'Asegurese de ingresar datos', */
             confirmButtonText: 'Entendido'
         })
         var user = firebase.auth().currentUser;
@@ -110,27 +121,6 @@ function verificar() {
         console.log(error);
     });
 }
-
-function observador() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            var providerData = user.providerData;
-            var profile = user.profile;
-            /* location.assign("home.html"); */
-        } else {
-            // User is signed out.
-            console.log("No existe usuario loggeado.");
-        }
-    });
-}
-
 
 function aparece() {
     location.assign("home.html");

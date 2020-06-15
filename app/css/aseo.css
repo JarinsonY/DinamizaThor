@@ -27,20 +27,28 @@
     padding-right: 0.1rem;
 }
 
-#periodo{
+#equipo{
     color: #6735dc;
     font-weight: 600;
     border-color: #6735dc;
+    background-color: #50246317;
+    margin: 2rem;
 }
-#periodo:hover{
+#equipo:hover{
     background-color: #502463;
     border-color: #502463;
-}
-#periodo:hover a{
     color: white;
 }
-#periodo a{
-    color: black;
+#equipo:hover a{
+    color: white;
+}
+#equipo:active{
+    background-color: #502463;
+    border-color: #502463;
+    color: white;
+}
+#equipo a{
+    color: white;
     text-decoration: none;
 }
 .dropdown-menu-center {
@@ -51,35 +59,16 @@
 }
 
 .main{
-    padding-top: 2rem;
     width: 800px;
     max-width: 90%;
-    margin: 30px auto;
+    margin: auto;
 }
 
-ul.nav-tabs li a{
-    color: black;
-    text-decoration: none;
+.equipos{
+    text-align: center;
 }
-
-.nav-link.active{
-    background-color: rgba(52, 58, 64, 0.082)!important;
-    color: black!important;
-}
-.color1{
-    background-color: #6735dc;
-}
-.color2{
-    background-color: #6E7270;
-}
-.color3{
-    background-color: #65382A;
-}
-.color4{
-    background-color: #782609;
-}
-.color1, .color2, .color3, .color4{
-    color: white!important;
+#tab1{
+    margin: 2rem auto;
 }
 
 .asignaturas{

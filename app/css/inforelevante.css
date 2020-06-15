@@ -13,6 +13,18 @@
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
 }
+/* Estado Actual */
+#estadoActual ol{
+    margin-bottom: 0;
+    font-size: smaller;
+    background-color: transparent;
+}
+#estadoActual li{
+    padding-left: 0.1rem;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding-right: 0.1rem;
+}
 
 .main{
     padding: 1rem 10rem;
@@ -26,8 +38,4 @@ p{
 .lbl{
     font-size: 16pt;
     font-weight: bold;
-}
-
-.calendario{
-    text-align: center;
 }

@@ -13,13 +13,43 @@
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
 }
+/* Estado Actual */
+#estadoActual ol{
+    margin-bottom: 0;
+    font-size: smaller;
+    background-color: transparent;
+}
+#estadoActual li{
+    padding-left: 0.1rem;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding-right: 0.1rem;
+}
+
+.scrollbar-dinamizathor::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+    
+.scrollbar-dinamizathor::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+    
+.scrollbar-dinamizathor::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(330deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%);
+    background-image: linear-gradient(120deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%); 
+}
 
 
 .centrar, #nombre, .custom-file{
     text-align: center;
 }
 .main{
-    padding-top: 4rem;
+    padding-top: 2.5rem;
 }
 #imgPerfil{
     width: 150px;

@@ -50,6 +50,20 @@ body{
 }
 
 /* MAIN */
+#cont2{
+    padding-top: 3rem;
+}
+@media screen and (max-width: 766px){
+    .fecha{
+        margin-top: 1rem;
+    }
+    #cont2{
+        padding-top: .2rem;
+    }
+    #logo{
+        padding-bottom: 1rem;
+    }
+}
 #logo{
     width: 60%;
 }

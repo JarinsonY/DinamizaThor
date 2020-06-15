@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
-    <link rel="stylesheet" href="css/aprendizaje.css">
+    <link rel="stylesheet" href="css/aseo.css">
     <title>DinamizaThor</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
@@ -44,50 +44,54 @@
 
         <header>
             <div class="row cabecera">
-                <div class="col-md-4"><a href="actinteractivas.html"><button class="btn btn-simbolo"
-                        id="btnVolverHome"><i class="fas fa-arrow-left"></i></button></a></div>
+                <div class="col-md-4"><a href="aprendizaje.html"><button class="btn btn-simbolo" id="btnVolverHome"><i
+                                class="fas fa-arrow-left"></i></button></a></div>
                 <div class="col-md-4">
-                    <h5><b>APRENDIZAJE</b></h5>
+                    <h5><b>ASEO</b></h5>
                 </div>
                 <div class="col-md-4">
                     <nav aria-label="breadcrumb" id="estadoActual">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="actinteractivas.html">Sección Interactiva</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Aprendizaje</li>
+                          <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="actinteractivas.html">Sección Interactiva</a></li>
+                          <li class="breadcrumb-item"><a href="aprendizaje.html">Aprendizaje</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Aseo</li>
                         </ol>
-                    </nav>
+                      </nav>
                 </div>
             </div>
         </header>
-        <br>
+
         <div class="main">
-            <div class="row opc">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h5>PLANILLA DE CALIFICACIONES</h5>
-                    <a href="notas.html" class="btn boton">Ver notas</a>
-                </div>
-                <div class="col-md-3"></div>
+            <div class="equipos">
+                <br>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-danger dropdown-toggle" type="button" id="equipo"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EQUIPO #
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-center" aria-labelledby="perido">
+                            <a class="dropdown-item" onclick=equipo1()>Equipo #1</a>
+                            <a class="dropdown-item" onclick=equipo2()>Equipo #2</a>
+                            <a class="dropdown-item" onclick=equipo3()>Equipo #3</a>
+                        </div>
+                    </div>
+
+                <article id="tab1">
+                    <table class="table justify-content-center table-hover" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_tabla">
+
+                        </tbody>
+                    </table>
+                </article>
             </div>
 
-            <div class="row opc">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h5>INFORMACIÓN DEL ASEO</h5>
-                    <a href="aseo.html" class="btn boton">Entrar</a>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
 
-            <div class="row opc">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h5>GRAMÁTICA</h5>
-                    <a href="gramatica.html" class="btn boton">Entrar</a>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
         </div>
     </div>
 
@@ -96,6 +100,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/aseo.js"></script>
 </body>
 
 </html>

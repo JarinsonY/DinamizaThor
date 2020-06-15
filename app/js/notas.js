@@ -90,4 +90,8 @@ function cambiarNotas() {
         `;
         $("#body_tabla1").children("tr").remove();
         $("#body_tabla1").append(fila);
+        $("#body_tabla2").children("tr").remove();
+        $("#body_tabla2").append(fila);
+        $("#body_tabla3").children("tr").remove();
+        $("#body_tabla3").append(fila);
 }

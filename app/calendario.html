@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
-    <link rel="stylesheet" href="css/inforelevante.css">
+    <link rel="stylesheet" href="css/calendario.css">
     <title>DinamizaThor</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
@@ -48,14 +48,22 @@
                 <div class="col-md-4">
                     <h5 class=""><b>CALENDARIO</b></h5>
                 </div>
+                <div class="col-md-4">
+                    <nav aria-label="breadcrumb" id="estadoActual">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Calendario Académico</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </header>
     </div>
-    <div class="container main calendario">
+    <div class="container main">
 
         <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FBogota&amp;src=amFhazBlcG5xdmI1bGttOGFkYjNudGk3ZmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXMuY28jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23795548&amp;color=%230B8043"
-            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            src="https://calendar.google.com/calendar/embed?&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FBogota&amp;src=amFhazBlcG5xdmI1bGttOGFkYjNudGk3ZmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXMuY28jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23795548&amp;color=%230B8043"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" id="calendario"></iframe>
 
     </div>
 
@@ -65,7 +73,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/calendario.js"></script>
 </body>
 
 </html>
