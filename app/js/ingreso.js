@@ -66,7 +66,7 @@ function registrar() {
         var user = firebase.auth().currentUser;
 
 
-        user.updateProfile({
+        user.updateProfile({ //Añado info del usuario en la base de datos, con img por defecto...
             displayName: nombre,
             profile: perfil,
             photoURL: "https://firebasestorage.googleapis.com/v0/b/usuarios-fc2d0.appspot.com/o/usuarioImgPerfil%2FuserProfile.png?alt=media&token=c6c2f28b-4212-49ac-b591-a027759d87fb"
@@ -95,6 +95,13 @@ function registrar() {
     })
         .catch(function (error) {
             // Handle Errors here.
+            Swal.fire({
+                title: 'Error!',
+                text: 'Datos inválidos, por favor complete correctamente todos los campos',
+                icon: 'error',
+                /* footer: 'Asegurese de ingresar datos', */
+                confirmButtonText: 'Intetar de nuevo'
+            })
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(errorCode);

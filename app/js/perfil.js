@@ -17,7 +17,6 @@ $(() => {
                 var uid = user.uid;
                 var providerData = user.providerData;
                 var profile = user.profile;
-                console.log(photoURL)
                 $("#imgPerfil").attr("src", photoURL);
             } else {
                 console.log("No existe usuario loggeado.");
@@ -45,10 +44,6 @@ db.collection("users").get().then((querySnapshot) => {
             $("#perfil").val(doc.data().profile);
             $("#ident").val(doc.data().doc);
             $("#correo").val(doc.data().email);
-            console.log(doc.data().first)
-            console.log(doc.data().profile)
-            console.log(doc.data().doc)
-            console.log(doc.data().email)
         }
     });
 });

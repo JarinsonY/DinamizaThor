@@ -46,6 +46,20 @@ form{
     border: 3px solid #555;
 }
 
+#olvido{
+    color: #555;
+    font-weight: bold;
+}
+.btn-outline-light{
+    color: black;
+    border-color: black;
+}
+.btn-outline-light:hover{
+    color: black;
+}
+.btns{
+    margin-top: 5rem;
+}
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff1E50D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -63,4 +77,30 @@ form{
 }
 .modal-lg {
     max-width: 60%;
+}
+
+
+@media screen and (max-width: 766px){
+    
+    #olvido{
+        color: #fff;
+        font-weight: bold;
+    }
+    .btn-outline-light{
+        color: white;
+        border-color: white;
+    }
+    .btn-outline-light:hover{
+        color: white;
+    }
+    .btns{
+        margin-top: 5rem;
+    }
+    #fg{
+        margin-top: 13rem;
+        margin-bottom: 8rem!important;
+    }
+    .modal-lg {
+        max-width: 100%;
+    }
 }

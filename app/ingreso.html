@@ -43,21 +43,22 @@
     <div class="container">
         <div class="contenido">
             <h1 class="brand">DINAMIZATHOR</h1>
-            <form action="" class="mb-3">
+            <form action="" class="mb-3" id="fg">
                 <div class="form-group">
                     <input type="text" placeholder="Correo" class="form-control" id="email" required>
                     <input type="password" placeholder="Contraseña" class="form-control mt-2" id="contrasena" required>
                 </div>
             </form>
             <br>
-            <a href="#" onclick="olvido()">¿Olvidaste tu contraseña?</a>
-            <br><br><br>
-
-            <button type="submit" class="btn btn-success mb-2" id="ingresar" onclick="ingresar()">Ingresar</button><br>
-            <button type="button" class="btn btn-outline-dark mb-2" data-toggle="modal"
-                data-target="#exampleModal">Registrarse</button><br>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2">Ver
-                Intro</button>
+            <a href="#" onclick="olvido()" id="olvido">¿Olvidaste tu contraseña?</a>
+            <br>
+            <div class="btns">
+                <button type="submit" class="btn btn-success mb-2" id="ingresar" onclick="ingresar()">Ingresar</button><br>
+                <button type="button" class="btn btn-outline-light mb-2" data-toggle="modal"
+                    data-target="#exampleModal">Registrarse</button><br>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2">Ver
+                    Intro</button>
+            </div>
         </div>
 
         <!-- Modal -->
@@ -101,7 +102,7 @@
         <!-- Modal 2 -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel2">INTRODUCCIÓN</h5>
@@ -113,7 +114,7 @@
                         <div id="carouselExampleIndicators" class="carousel slide funcionalidades" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                    class="carouselIndicators" class="active"></li>
+                                    class="carouselIndicators active"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="1"
                                     class="carouselIndicators"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"
