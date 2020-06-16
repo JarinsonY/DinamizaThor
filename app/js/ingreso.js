@@ -2,6 +2,13 @@
 var db = firebase.firestore();
 $(() => {
     observador();
+    Swal.fire({
+        title: 'BIENVENIDO PROFESOR',
+        text: '\nProfe Posada, a su disposición tendrá la siguiente cuenta: \n\n Email: posada@dinamizathor.com \nContraseña: docente.posada'
+        +'\n\nEn todo caso, el botón registrarse sirve y nos gustaría que lo ponga a prueba.',
+        icon: 'info',
+        confirmButtonText: 'Entendido'
+    })
 })
 
 function observador() {
@@ -16,7 +23,6 @@ function observador() {
             var uid = user.uid;
             var providerData = user.providerData;
             var profile = user.profile;
-            location.assign("home.html");
         } else {
             // User is signed out.
             console.log("No existe usuario loggeado.");
@@ -92,6 +98,10 @@ function registrar() {
                 console.error("Error adding document: ", error);
             });
         verificar();
+
+        /* ABRIR INTRO */
+        $("#intro").click();
+
     })
         .catch(function (error) {
             // Handle Errors here.
@@ -133,15 +143,6 @@ function aparece() {
     location.assign("home.html");
 }
 
-/* function cerrar() {
-    firebase.auth().signOut().then(function () {
-        alert("Saliendo...");
-        location.assign("ingreso.html");
-    }).catch(function (error) {
-        console.log("Ocurrió un error.");
-        console.log(error);
-    })
-} */
 
 function olvido() {
     var auth = firebase.auth();
