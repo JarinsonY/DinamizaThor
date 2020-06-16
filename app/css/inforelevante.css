@@ -39,3 +39,21 @@ p{
     font-size: 16pt;
     font-weight: bold;
 }
+
+/* FOOTER */
+footer p{
+    border-bottom: none;
+}
+footer{
+    color: rgb(100, 100, 100);
+}
+.notext-decoration, a .notext-decoration, .notext-decoration p a{
+    text-decoration: none;
+}
+.copyright{
+    float: right;
+    font-size: x-small;
+}
+.pie{
+    font-size: x-small;
+}

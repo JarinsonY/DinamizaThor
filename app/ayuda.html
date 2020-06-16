@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="icon" href="../landing/img/favicon.png" sizes="64x64" type="image/png" />
+    <link rel="stylesheet" href="css/ayuda.css">
+    <title>DinamizaThor</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCcFToUXcaHnJefmZvZ_PAYIV__Pvy7FYk",
+            authDomain: "usuarios-fc2d0.firebaseapp.com",
+            databaseURL: "https://usuarios-fc2d0.firebaseio.com",
+            projectId: "usuarios-fc2d0",
+            storageBucket: "usuarios-fc2d0.appspot.com",
+            messagingSenderId: "406211320164",
+            appId: "1:406211320164:web:5afacb8571fbb730968271",
+            measurementId: "G-FN49Y6PLN8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+
+<body class="informacion">
+    <div class="container">
+        <header>
+            <div class="row cabecera">
+                <div class="col-md-4"><a href="perfil.html"><button class="btn btn-simbolo" id="btnVolverHome"><i
+                                class="fas fa-arrow-left"></i></button></a></div>
+                <div class="col-md-4">
+                    <h5 class=""><b>AYUDA</b></h5>
+                </div>
+                <div class="col-md-4">
+                    <nav aria-label="breadcrumb" id="estadoActual">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="perfil.html">Perfil</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ayuda</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            <h5 class="mb-4">PREGUNTAS FRECUENTES</h5>
+
+
+            <div class="list-group list-group-flush" id="preguntas">
+                <button type="button" class="list-group-item list-group-item-action list-group-item-primary"
+                    data-toggle="modal" data-target="#exampleModal">¿Cómo busco una palabra en otro
+                    idioma?
+                </button>
+                <button type="button" class="list-group-item list-group-item-action list-group-item-secondary"
+                    data-toggle="modal" data-target="#exampleModal2">¿Cómo sé cuál es mi grupo de
+                    aseo?</button>
+                <button type="button" class="list-group-item list-group-item-action list-group-item-success"
+                    data-toggle="modal" data-target="#exampleModal3">¿Cómo salgo de una forma
+                    segura?</button>
+                <button type="button" class="list-group-item list-group-item-action list-group-item-warning"
+                    data-toggle="modal" data-target="#exampleModal4">¿Como puedo cambiar mi foto de
+                    perfil o mi contraseña?</button>
+                <button type="button" class="list-group-item list-group-item-action list-group-item-info"
+                    data-toggle="modal" data-target="#exampleModal5">¿Puedo iniciar una reunión
+                    'Dinamic' desde mi posición como estudiante?</button>
+            </div>
+
+            <div class="modals">
+
+                <!-- Modal 1 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Cómo busco una palabra en otro
+                                    idioma?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Para buscar una palabra en otro idioma primero debes de acceder a la sección de
+                                    gramática si es que no lo has hecho, siguiendo la siguiente ruta:
+                                </p>
+                                <ol>
+                                    <li>Home</li>
+                                    <li>Sección Interactiva</li>
+                                    <li>Aprendizaje</li>
+                                    <li>Gramática</li>
+                                </ol>
+                                <p>
+                                    De allí en más, encontrarás un recuadro el cual contiene el diccionario web que usa
+                                    la aplicación debajo de la barra del buscador, encontraras un pequeño desplegable el
+                                    cual contendrá las opciones de lenguaje que quieras escoger, la cual te brindara
+                                    tanto traducciones como también significados, antónimos y sinónimos acompañados de
+                                    ejemplos.
+                                </p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Cómo sé cuál es mi grupo de
+                                    aseo?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Puedes identificar tu grupo de aseo al entrar a la ruta Home / Sección
+                                    Interactiva / Aprendizaje / Aseo, allí encontrarás un recuadro con los integrantes
+                                    del
+                                    grupo de aseo de la semana, y por otro lado, también encontrarás un botón de
+                                    selección de grupos, donde aparecen los distintos grupos en disposición ya
+                                    generados.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Cómo salgo de una forma
+                                    segura?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Para salir de forma segura de tu cuenta institucional debes de ingresar a tu perfil
+                                    estudiantil, en la sección de configuración, allí encontrarás, aparte de tu
+                                    información personal registrada, un botón el cual te permite salir de forma segura
+                                    de Dinamizathor.
+                                </p>
+                                <p>
+                                    Es importante recalcar que también tienes la posibilidad de salir
+                                    desde el home.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 4 -->
+                <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Como puedo cambiar mi foto de
+                                    perfil o mi contraseña?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Para cambiar tu foto de perfil o contraseña primero debes de acceder a tu perfil
+                                    estudiantil, el cual es accesible desde la ventana "Home", allí encontrarás un botón
+                                    de edición, el cual te permitirá realizar cambios en tu perfil según lo veas
+                                    provechoso y de allí en más, las opciones de edición de perfil y cuenta estarán a tu
+                                    disposición.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 5 -->
+                <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Puedo iniciar una reunión
+                                    'Dinamic' desde mi posición como estudiante?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Para iniciar una reunión en la sección 'Dinamic classroom' , en la parte superior de
+                                    esta pantalla encuentras una opción llamada 'Iniciar reunión', la cual se encargará
+                                    de iniciar una reunión en Meet, y de allí en más, iniciada por estudiantes o por
+                                    maestros, puedes realizar tus reuniones.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contac">
+                <h5 class="mb-4">¿No encontraste la respuesta a lo que necesitabas?</h5>
+                <p>Contáctanos y haremos lo posible para ayudarte</p>
+                <a href="mailto:dinamizathor@gmail.com?subject=No le encuentro respuesta a mi pregunta"
+                    target="_blank"><button type="button" class="btn btn-ligth" id="contactar">dinamizathor@gmail.com</button></a>
+            </div>
+
+        </div>
+
+        <footer class="text-muted">
+            <div class="container notext-decoration ">
+                <p class="copyright">Develop By: Dotores <i class="fa fa-copyright" aria-hidden="true">.</i></p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ayuda.js"></script>
+</body>
+
+</html>

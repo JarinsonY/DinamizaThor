@@ -76,7 +76,8 @@ footer{
     text-decoration: none;
 }
 .text-muted {
-    color: #5a5a5a!important;
+    color: #fff!important;
+    text-shadow: 0.3rem 0.1rem 7px #6c757d;
 }
 .copyright{
     float: right;

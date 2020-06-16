@@ -46,6 +46,7 @@
 #nombre{
     font-size: xx-large;
     color: white;
+    text-shadow: 0.3rem 0.3rem 5px #000;
 }
 .titulo{
     font-size: large;
@@ -86,11 +87,17 @@
     color: black;
     background-color: transparent;
 }
+.input-izq{
+    box-shadow: 0.3rem 0.3rem 5px #50246377;
+}
+.input-der{
+    box-shadow: -0.3rem 0.3rem 5px #50246377;
+}
 
 /* INFORMACIÓN */
 
 .info{
-    padding-top: 5rem;
+    padding-top: 3rem;
     text-align: center;
 }
 .btnOpciones{
@@ -113,6 +120,24 @@
     border-radius: 10px;
     background-image: -webkit-linear-gradient(330deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%);
     background-image: linear-gradient(120deg, #F0E52A 0%, #E1E1E1 50%, #717573 100%); 
+}
+
+/* FOOTER */
+footer{
+    color: rgb(100, 100, 100);
+}
+.notext-decoration, a .notext-decoration, .notext-decoration p a{
+    text-decoration: none;
+}
+.text-muted {
+    color: #3e4142!important;
+}
+.copyright{
+    float: right;
+    font-size: x-small;
+}
+.pie{
+    font-size: x-small;
 }
 
 @media screen and (max-width: 766px){
