@@ -1,3 +1,7 @@
+body{
+    background: #65382A;
+    color: white;
+}
 .cabecera{
     align-items: center;
     text-align: center;
@@ -5,10 +9,10 @@
 }
 .btn-simbolo{
     background-color: transparent;
-    border-color: black;
+    border-color: white;
 }
-.btn-simbolo a{
-    color: black;
+a .btn-simbolo{
+    color: white;
 }
 .btn-simbolo:hover{
     background-color: rgb(221, 221, 221);
@@ -21,6 +25,7 @@
 }
 #estadoActual li{
     padding-left: 0.1rem;
+    color: white;
 }
 .breadcrumb-item+.breadcrumb-item::before{
     padding-right: 0.1rem;
@@ -30,7 +35,8 @@
     text-align: center;
 }
 .boton{
-    border: 2px solid #6735dc;
+    border: 2px solid white;
+    color: white;
     margin-top: 1rem;
     border-radius: 5px;
 }
