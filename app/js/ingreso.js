@@ -2,13 +2,6 @@
 var db = firebase.firestore();
 $(() => {
     observador();
-    Swal.fire({
-        title: 'BIENVENIDO PROFESOR',
-        text: '\nProfe Posada, a su disposición tendrá la siguiente cuenta: \n\n Email: posada@dinamizathor.com \nContraseña: docente.posada'
-        +'\n\nEn todo caso, el botón registrarse sirve y nos gustaría que lo ponga a prueba.',
-        icon: 'info',
-        confirmButtonText: 'Entendido'
-    })
 })
 
 function observador() {
