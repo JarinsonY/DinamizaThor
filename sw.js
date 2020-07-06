@@ -1,6 +1,6 @@
 ;
 //Asignar un nombre y versión al cache
-const CACHE_NAME = 'v1_cache_afrobin',
+const CACHE_NAME = 'v1_cache_dinamizathor',
     urlsToCache = [
         './',
         'https://fonts.googleapis.com/css?family=Playfair+Display:700,900',
@@ -8,8 +8,8 @@ const CACHE_NAME = 'v1_cache_afrobin',
         'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css',
-        './style.css',
-        './script.js',
+        './landing/css/style.css',
+        './app.js',
         './landing/img/Logo.png',
         './landing/img/favicon.png'
     ]
