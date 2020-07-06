@@ -2,6 +2,18 @@
 var db = firebase.firestore();
 $(() => {
     observador();
+    $("#email").keypress(function (e) {
+        if (e.which == 13) {
+            // Acciones a realizar, por ej: enviar formulario.
+            $("#contrasena").focus();
+        }
+    });
+    $("#contrasena").keypress(function (e) {
+        if (e.which == 13) {
+            // Acciones a realizar, por ej: enviar formulario.
+            ingresar();
+        }
+    });
 })
 
 function observador() {

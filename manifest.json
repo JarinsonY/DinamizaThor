@@ -3,7 +3,7 @@
     "name": "DinamizaThor",
     "short_name": "DinamizaThor",
     "description": "DinamizaThor es un aplicativo que te permite acceder a la información académica por medio de diferentes perfiles, con diferentes propiedades. Pero en todos los casos, permite acceder de manera organizada a lo más relevante en la vida educativa y todo esto desde la comodidad de un teléfono móvil.",
-    "background_color": "#2B2B2B",
+    "background_color": "#E1E1E1",
     "theme_color": "#F0E52A",
     "orientation": "portrait",
     "display": "standalone",
