@@ -1,11 +1,6 @@
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 $(() => {
-    /* if (user) {
-        aparece();
-    } else{
-        console.log("Ingrese Primero")
-    } */
     observador();
     $("#email").keypress(function (e) {
         if (e.which == 13) {
